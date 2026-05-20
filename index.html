@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beetle KI – Majestic RP Regelwerk</title>
+  <title>Anonym KI – Majestic RP Regelwerk</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -326,7 +326,7 @@
       </svg>
     </div>
     <div>
-      <div class="header-title">Beetle KI</div>
+      <div class="header-title">Anonym KI</div>
       <div class="header-sub">Majestic RP · Regelwerk-Assistent</div>
     </div>
   </div>
@@ -399,7 +399,7 @@
             <path d="M72 18 C78 12, 92 10, 94 18 C90 16, 82 16, 78 22" fill="#1D9E75" opacity="0.6"/>
           </svg>
         </div>
-        <h2>Beetle KI</h2>
+        <h2>Anonym</h2>
         <p>Dein Regelwerk-Assistent für Majestic RP. Stelle eine Frage oder wähle eine Kategorie aus der linken Seitenleiste.</p>
         <div class="chip-row">
           <button class="chip" onclick="askQ('Darf ich jemanden erschießen der mich grob beleidigt?')">Beleidigung → erschießen?</button>
@@ -419,7 +419,7 @@
           <i class="ti ti-send"></i>
         </button>
       </div>
-      <p class="input-hint">Beetle KI · Majestic RP Regelwerk Stand 08.05.2026 · KI-gestützt · Keine Daten werden gespeichert</p>
+      <p class="input-hint">Anonym KI· Majestic RP Regelwerk Stand 08.05.2026 · KI-gestützt · Keine Daten werden gespeichert</p>
     </div>
   </main>
 </div>
@@ -431,9 +431,9 @@ const RAVEN_SVG = `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.o
   <path d="M72 18 C78 12, 92 10, 94 18 C90 16, 82 16, 78 22" fill="white" opacity="0.7"/>
 </svg>`;
 
-const SYSTEM_PROMPT = `Du bist Beetle KI, ein präziser Regelwerk-Assistent für den deutschen GTA RP-Server "Majestic RP".
+const SYSTEM_PROMPT = `Du bist Anonym KI, ein präziser Regelwerk-Assistent für den deutschen GTA RP-Server "Majestic RP".
 Beantworte Fragen NUR auf Basis des folgenden Regelwerks. Wenn eine Situation durch das Regelwerk abgedeckt ist, erkläre die Regel klar und korrekt inklusive Strafen. Wenn eine Situation NICHT im Regelwerk steht, sage das ehrlich.
-
+WICHTIG: Lies dir die Regeln richtig durch und Antworte nicht mit mit "Nein" wenn das genannte Wort was in der Regel Steht, in einer Frage des Users gesagt wird.
 WICHTIG: Antworte immer auf Deutsch. Halte Antworten präzise und strukturiert. Benutze HTML-Tags für Formatierung (<strong>, <br>, <span class="tag tag-red/amber/green">).
 
 === VOLLSTÄNDIGES MAJESTIC RP REGELWERK ===
@@ -539,6 +539,8 @@ Punkt max. 30 Min halten. Verboten: Sniper, Drohnen, Taser, Privatfahrzeuge (au�
 Zeiten: Di, Do, So 15:00–21:00 Uhr. 8–15 Personen.
 Verboten: Waffen außerhalb Crafting-Menü, Sniper, MGs, schwere Schrotflinten, Stungewehre, Highground.
 POV-Pflicht: 720p, ungeschnitten, Originalton, 48h aufbewahren. Fehlende POV: Konto Ban 15 Tage.
+Änderung: Es ist verboten, schwierig zu erreichende Orte zu betreten und sie zu nutzen.
+Hinweis: Tunnel, Innenräume, Container sowie Garagen, sowie diese liste: https://imgur.com/a/aOO1ImQ
 
 **Staatliche Fraktionen**
 Mitgliedschaft verboten bei Strafregister (außer Tat >7 Tage alt). Bad-Cop verboten.
@@ -568,7 +570,19 @@ EMS darf während Arbeit nicht angegriffen werden. EMS darf bei aktivem Schussge
 
 **Konvoi / Materialtransport**
 Angreifbar: 15:00–22:30 Uhr. Schutzzeit: 16:00–17:00 Uhr.
-Max. 30.000 Materialien pro Lieferung. Angriff nur per Straßenblockade (mind. 4 Autos). Scharfschützengewehre verboten.`;
+Max. 30.000 Materialien pro Lieferung. Angriff nur per Straßenblockade (mind. 4 Autos). Scharfschützengewehre verboten.
+
+**State vs Crime**
+Nur Sturmgewehre, Schrotflinten und Revolver erlaubt.
+Keine Sniper, Taser oder Marksman Pistole.
+Kein AFK, Bug Abuse, Teamkill oder absichtliches Aufgeben.
+Fraktions-/Clanfarbe muss sichtbar sein.
+State und Crime müssen sich bei Kontakt bekämpfen.
+Keine unerlaubten Animationen.
+Jeder muss das komplette Event aufnehmen (mind. 720p, ungeschnitten, 48h speichern).
+State: Keine Handschellen, Drohnen oder Wärmebildkameras.
+Crime: Keine Kabelbinder oder Drohnen.
+Erlaubt: Schutzwesten, Adrenalin, Defibrillator.`;
 
 let hasMessages = false;
 let isLoading = false;
